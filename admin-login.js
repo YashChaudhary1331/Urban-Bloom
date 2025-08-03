@@ -8,9 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const username = document.getElementById('admin-username').value;
         const password = document.getElementById('admin-password').value;
 
-        // --- CORRECTED ADMIN CREDENTIALS ---
-        // For a static site on Vercel, we will define the credentials directly here.
-        // You can change these values to whatever you like.
+        // Hardcoded credentials for the admin.
         const ADMIN_USERNAME = 'admin';
         const ADMIN_PASSWORD = 'password123';
 
