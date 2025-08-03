@@ -1,4 +1,12 @@
 document.addEventListener('DOMContentLoaded', () => {
+    // --- Admin Authentication Check ---
+    // This is a simple security check. If the login flag is not set in sessionStorage,
+    // the user is redirected back to the admin login page.
+    if (sessionStorage.getItem('isAdminLoggedIn') !== 'true') {
+        window.location.href = 'admin-login.html';
+        return; // Stop the rest of the script from executing
+    }
+
     const userDataBody = document.getElementById('user-data-body');
     const orderDataBody = document.getElementById('order-data-body');
 
