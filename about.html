@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Urban Bloom</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+
+    <header class="header">
+        <div class="container">
+            <a href="index.html" class="logo">Urban Bloom</a>
+            <nav class="main-nav">
+                <div class="nav-links">
+                    <a href="index.html">Home</a>
+                    <a href="shop.html">Shop</a>
+                    <a href="about.html" class="active">About</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+                <div class="user-nav"></div>
+                <div class="cart-button">
+                    <i class="fas fa-shopping-bag"></i>
+                    <span class="cart-item-count">0</span>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <h2 class="page-header">Our Story</h2>
+            <div class="content-section">
+                <p>Urban Bloom was founded on a simple idea: everyone deserves to have a little nature in their life, no matter how small their space. We started in a tiny city apartment, discovering the joy and tranquility that a single houseplant could bring to a busy urban environment. We realized that plants aren't just decor; they're living companions that clean our air, boost our mood, and connect us back to the natural world.</p>
+                <p>Our mission is to make plant ownership accessible and enjoyable for everyone. We carefully select the hardiest, most beautiful plants and provide you with all the knowledge you need to help them thrive. From our greenhouse to your home, we're with you every step of the way. Welcome to the Urban Bloom family.</p>
+            </div>
+        </div>
+    </main>
+    
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">Urban Bloom</div>
+                <div class="footer-links">
+                    <a href="faqs.html">FAQs</a>
+                    <a href="shipping.html">Shipping & Returns</a>
+                    <a href="plant-care.html">Plant Care Tips</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                &copy; 2025 Urban Bloom. All Rights Reserved.
+            </div>
+        </div>
+    </footer>
+
+    <aside class="cart-sidebar">
+    <div class="cart-header">
+        <h3>Your Cart</h3>
+        <i class="fas fa-times close-cart-btn"></i>
+    </div>
+    <div class="cart-items">
+        </div>
+    <div class="cart-footer">
+        <div class="cart-total">
+            <span>Subtotal</span>
+            <span id="cart-total-price">₹0.00</span>
+        </div>
+        <button class="btn checkout-btn">Checkout</button>
+        <button class="clear-cart-btn">Clear Cart</button>
+    </div>
+</aside>
+  <div id="modal" class="modal-overlay">
+    <div class="modal-content">
+        <i class="fas fa-times modal-close-icon"></i>
+        <div id="modal-body">
+            </div>
+    </div>
+</div>
+
+    <script src="script.js"></script>
+</body>
+</html>

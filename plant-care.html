@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plant Care Tips - Urban Bloom</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+
+    <header class="header">
+        <div class="container">
+            <a href="index.html" class="logo">Urban Bloom</a>
+            <nav class="main-nav">
+                <div class="nav-links">
+                    <a href="index.html">Home</a>
+                    <a href="shop.html">Shop</a>
+                    <a href="about.html">About</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+                <div class="user-nav"></div>
+                <div class="cart-button">
+                    <i class="fas fa-shopping-bag"></i>
+                    <span class="cart-item-count">0</span>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <h2 class="page-header">Plant Care Tips</h2>
+            <div class="content-section">
+                <h3>The Golden Rule: Watering</h3>
+                <p>Overwatering is the most common mistake new plant parents make. It's better to under-water than over-water. A simple test is to stick your finger about an inch into the soil. If it feels dry, it's time to water. If it's moist, wait a few more days. Most common houseplants prefer their soil to dry out slightly between waterings.</p>
+
+                <h3>Let There Be Light</h3>
+                <p>Light is food for plants. Most houseplants thrive in bright, indirect light. This means a spot near a window where the sun's rays don't directly hit the leaves, which can cause them to burn. A sheer curtain can be a great way to diffuse bright sunlight. Low-light plants like Snake Plants and ZZ Plants can tolerate shadier corners.</p>
+
+                <h3>Common Problems & Solutions</h3>
+                <p><strong>Yellow Leaves:</strong> This is often a sign of overwatering. Check the soil moisture and allow it to dry out before watering again. It can also sometimes mean a nutrient deficiency.</p>
+                <p><strong>Brown, Crispy Tips:</strong> This usually indicates dry air. Try misting your plants with water every few days or placing them near a humidifier. It can also be a sign of inconsistent watering.</p>
+                <p><strong>Pests:</strong> Small insects like spider mites or mealybugs can occasionally appear. The best first step is to wipe the leaves with a damp cloth and a mild soap solution. Neem oil is a great natural pesticide for more persistent issues.</p>
+            </div>
+        </div>
+    </main>
+    
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">Urban Bloom</div>
+                <div class="footer-links">
+                    <a href="faqs.html">FAQs</a>
+                    <a href="shipping.html">Shipping & Returns</a>
+                    <a href="plant-care.html">Plant Care Tips</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                &copy; 2025 Urban Bloom. All Rights Reserved.
+            </div>
+        </div>
+    </footer>
+
+  <aside class="cart-sidebar">
+    <div class="cart-header">
+        <h3>Your Cart</h3>
+        <i class="fas fa-times close-cart-btn"></i>
+    </div>
+    <div class="cart-items">
+        </div>
+    <div class="cart-footer">
+        <div class="cart-total">
+            <span>Subtotal</span>
+            <span id="cart-total-price">₹0.00</span>
+        </div>
+        <button class="btn checkout-btn">Checkout</button>
+        <button class="clear-cart-btn">Clear Cart</button>
+    </div>
+</aside>
+   <div id="modal" class="modal-overlay">
+    <div class="modal-content">
+        <i class="fas fa-times modal-close-icon"></i>
+        <div id="modal-body">
+            </div>
+    </div>
+</div>
+
+    <script src="script.js"></script>
+</body>
+</html>

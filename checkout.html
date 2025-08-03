@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout - Urban Bloom</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Montserrat:wght@400;500;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="container">
+            <a href="index.html" class="logo">Urban Bloom</a>
+            <nav class="main-nav">
+                <div class="nav-links">
+                    <a href="index.html">Home</a>
+                    <a href="shop.html">Shop</a>
+                    <a href="about.html">About</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+                <div class="user-nav"></div>
+                <div class="cart-button">
+                    <i class="fas fa-shopping-bag"></i>
+                    <span class="cart-item-count">0</span>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <h2 class="page-header">Checkout</h2>
+            <div class="checkout-layout">
+                <div class="checkout-details">
+                    <div class="checkout-section">
+                        <h3>Shipping Information</h3>
+                        <form class="shipping-form" id="shipping-form">
+                            <div class="form-group">
+                                <label for="name">Full Name</label>
+                                <input type="text" id="name" name="name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="address">Address</label>
+                                <input type="text" id="address" name="address" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="city">City</label>
+                                <input type="text" id="city" name="city" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="pincode">Pincode</label>
+                                <input type="text" id="pincode" name="pincode" required pattern="[0-9]{6}">
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Phone Number</label>
+                                <input type="tel" id="phone" name="phone" required pattern="[0-9]{10}">
+                            </div>
+                        </form>
+                    </div>
+                    <div class="checkout-section" style="margin-top: 2rem;">
+                        <h3>Payment Method</h3>
+                        <div class="payment-options">
+                            <div class="payment-option" data-method="upi">
+                                <i class="fas fa-mobile-alt"></i>
+                                <span>UPI (Google Pay, PhonePe, etc.)</span>
+                            </div>
+                            <div class="payment-option" data-method="card">
+                                <i class="far fa-credit-card"></i>
+                                <span>Credit / Debit Card</span>
+                            </div>
+                            <div class="payment-option" data-method="netbanking">
+                                <i class="fas fa-university"></i>
+                                <span>Net Banking</span>
+                            </div>
+                            <div class="payment-option" data-method="cod">
+                                <i class="fas fa-hand-holding-usd"></i>
+                                <span>Cash on Delivery (COD)</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="order-summary-wrapper">
+                    <div class="checkout-section order-summary">
+                        <h3>Order Summary</h3>
+                        <div id="summary-items">
+                        </div>
+                        <div id="summary-discount" class="summary-item" style="display: none;">
+                        </div>
+                        <form class="coupon-form" id="coupon-form">
+                            <input type="text" id="coupon-code" placeholder="Enter coupon code">
+                            <button type="submit" class="btn-apply-coupon">Apply</button>
+                        </form>
+                        <!-- Summary items will be dynamically inserted here -->
+                    </div>
+                    <div class="summary-item">
+                        <span>Shipping</span>
+                        <span id="summary-shipping">₹99.00</span>
+                    </div>
+                    <div class="summary-total">
+                        <span>Total</span>
+                        <span id="summary-total-price">₹0.00</span>
+                    </div>
+                    <button id="place-order-btn" class="btn" style="width: 100%;">Place Order</button>
+                </div>
+            </div>
+        </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">Urban Bloom</div>
+                <div class="footer-links">
+                    <a href="faqs.html">FAQs</a>
+                    <a href="shipping.html">Shipping & Returns</a>
+                    <a href="plant-care.html">Plant Care Tips</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                &copy; 2025 Urban Bloom. All Rights Reserved.
+            </div>
+        </div>
+    </footer>
+
+    <aside class="cart-sidebar">
+        <div class="cart-header">
+            <h3>Your Cart</h3>
+            <i class="fas fa-times close-cart-btn"></i>
+        </div>
+        <div class="cart-items">
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span>Subtotal</span>
+                <span id="cart-total-price">₹0.00</span>
+            </div>
+            <button class="btn checkout-btn">Checkout</button>
+            <button class="clear-cart-btn">Clear Cart</button>
+        </div>
+    </aside>
+    <div id="modal" class="modal-overlay">
+        <div class="modal-content">
+            <i class="fas fa-times modal-close-icon"></i>
+            <div id="modal-body">
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
