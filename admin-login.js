@@ -5,21 +5,24 @@ document.addEventListener('DOMContentLoaded', () => {
     loginForm.addEventListener('submit', (e) => {
         e.preventDefault();
 
-        const usernameInput = document.getElementById('admin-username').value;
-        const passwordInput = document.getElementById('admin-password').value;
+        const username = document.getElementById('admin-username').value;
+        const password = document.getElementById('admin-password').value;
 
-        // Read the secure credentials from Vercel's Environment Variables
-        const ADMIN_USERNAME = import.meta.env.VITE_ADMIN_USERNAME;
-        const ADMIN_PASSWORD = import.meta.env.VITE_ADMIN_PASSWORD;
+        // --- CORRECTED ADMIN CREDENTIALS ---
+        // For a static site on Vercel, we will define the credentials directly here.
+        // You can change these values to whatever you like.
+        const ADMIN_USERNAME = 'admin';
+        const ADMIN_PASSWORD = 'password123';
 
-        if (usernameInput === ADMIN_USERNAME && passwordInput === ADMIN_PASSWORD) {
-            // On successful login, set a flag in sessionStorage
+        if (username === ADMIN_USERNAME && password === ADMIN_PASSWORD) {
+            // On successful login, set a flag in sessionStorage.
+            // This flag is temporary and will be cleared when the browser tab is closed.
             sessionStorage.setItem('isAdminLoggedIn', 'true');
             
-            // Redirect to the main admin dashboard
+            // Redirect to the main admin dashboard.
             window.location.href = 'admin.html';
         } else {
-            // If credentials do not match, show an error message
+            // If credentials do not match, show an error message.
             errorMessage.style.display = 'block';
         }
     });
